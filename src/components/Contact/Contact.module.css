@@ -1,6 +1,8 @@
 .wrapper {
     display: flex;
     align-items: center;
+    font-weight: bold;
+    color: #ffefd6;
 }
 
 .icon {
@@ -8,22 +10,21 @@
   align-items: center;
   justify-content: center;
 
-  background-color: rgb(255, 194, 154);
+  background-color: #ed8771;
 
-  border-radius: 50%;
-  /* color: black;  */
+  border-radius: 40%;
 
-  margin: 0 5px 0 0; 
-  padding: 15px;
+  margin: 0 10px 0 0; 
+  padding: 10px;
 }
 
 .number {
   font-weight: 600;
-  margin-right: 5px;
+  margin: 0 15px 0 0 ;
 }
 
 .button {
-    display: inline-flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 
@@ -33,9 +34,9 @@
 
   border: none;
   border-radius: 50%;
-  background-color: #2b2b2b;
+  background-color: #f3694d;
   color: rgb(255, 194, 154);
-
+  transition: background-color 0.4s;
   
 }
 
@@ -43,6 +44,4 @@
 .button:focus {
     cursor: pointer;
   background-color: rgb(56, 56, 56);
-  color: rgb(254, 151, 82);
-
 }

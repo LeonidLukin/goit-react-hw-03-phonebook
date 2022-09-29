@@ -16,23 +16,25 @@
 
 .input {
   max-width: 400px;
-    height: 40px;
-    padding: 0 10px 0 10px;
+  height: 40px;
+  padding: 0 10px 0 10px;
+  font-size: 14px;    
 
-    font-size: 14px;    
+  border: none;
+  border-radius: 5px;
 }
 
 .input:focus {
-  border-color: blue;
+  /* border-color: blue; */
+  border: none;
 }
 
 .input::placeholder {
   font-size: 12px;
-  /* color: var(--main-text-color); */
 }
 
 .button {
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 
@@ -43,13 +45,14 @@
   color: var(--second-text-color); */
   font-family: inherit;
   border: none;
+  border-radius: 4px;
 
   cursor: pointer;
-  /* transition: background-color var(--main-hover-animation); */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .button:hover,
 .button:focus {
-  background-color: gray;
+  background-color: #047d9a;
   color: wheat;
 }
