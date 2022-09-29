@@ -1,11 +1,15 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Component } from 'react';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import css from './ContactForm.module.css';
 
 class ContactForm extends Component {
-    // static propTypes = {
-    //     onSubmit: PropTypes.func
-    // };
+    static propTypes = {
+        onSubmit: PropTypes.func
+    };
 
     state = {
         name: '',
@@ -31,7 +35,16 @@ class ContactForm extends Component {
 
     render() {
         const { name, number } = this.state;
-
+        const notify = () => toast(`${name} added to your contacts`, {
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'light',
+        })
         return (
             <form className={css.form} onSubmit={this.handleSubmit}>
                 <label className={css.label}>
@@ -60,9 +73,10 @@ class ContactForm extends Component {
                         required
                     />
                 </label>
-                <button className={css.button} type="submit">
+                <button className={css.button} type="submit" onClick={notify}>
                     Add contact
                 </button>
+                <ToastContainer />
             </form>
         );
     }
